@@ -1,4 +1,5 @@
 class AnimalsController < ApplicationController
+  before_action :authenticate_user!, except: [ :index ]
   before_action :set_animal, only: [:show, :update, :destroy]
 
   # GET /animals
